@@ -1,0 +1,168 @@
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  padding-top: 200px;
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.body {
+    padding-top: 150px;
+}
+
+.navbar {
+  background-color: #082550 !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 180px;
+}
+
+.logo-navbar {
+  height: 120px; /* Podés ajustar este valor si querés el logo más chico o más grande */
+  margin-left: 30px;
+  object-fit: contain;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #a6c8ff !important;
+}
+
+.contenedor-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+}
+
+.img-instituto {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.separado {
+  margin-bottom: 60px;
+}
+
+.seccion-texto {
+  flex: 1;
+  font-family: 'Arial', sans-serif;
+  color: #003366;
+}
+#formulario-contenedor {
+  background-color: white;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: 40px;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 20px 4px 0 rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #082550;
+}
+
+
+.card {
+  border-left: 5px solid #082550; /* Azul secundario */
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+.btn-primary {
+  background-color: #082550;
+  border-color: #082550;
+}
+
+.btn-primary:hover {
+  background-color: #082550;
+  border-color: #003b75;
+}
+
+.btn-secondary {
+  background-color: #4a6fa5;
+  border-color: #4a6fa5;
+}
+
+.btn-info {
+  background-color: #0072ce;
+  border-color: #0072ce;
+}
+
+.btn-info:hover {
+  background-color: #005bb5;
+  border-color: #0053a0;
+}
+
+footer {
+  background-color: #002855;
+  color: #ffffff;
+  padding:0;
+  width: 100%;
+  clear: both;
+}
+
+footer a {
+  color: #ffffff; /* blanco para que se vea sobre fondo oscuro */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #a6c8ff; /* azul clarito al pasar el mouse */
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; 
+}
+
+.grid-container {
+  flex: 1;
+  min-width: 350px;
+}
+
+.result-box {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+.footer-full {
+  background-color: #002855;
+  color: #ffffff;
+  width: 100%;
+  margin: 0;
+  padding: 3rem 0 1rem 0;
+  clear: both;
+  position: relative;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+     

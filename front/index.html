@@ -1,42 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Student API Client</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-</head>
-<body>
-    <h1>Student API Client</h1>
+<html lang="es">
+ <head>
+  <meta charset="UTF-8">
+  <title>“Juana Paula Manso”</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="app.js"></script>
+  <script src="index.js"></script>
+ </head>
+<body class="bg-light text-dark">
 
-    <section>
-        <h2>Register Student</h2>
-        <input type="text" id="registerName" placeholder="Name">
-        <input type="text" id="registerCareer" placeholder="Career">
-        <button onclick="registerStudent()">Register</button>
-        <pre id="registerResult"></pre>
-    </section>
+ <!-- NAVBAR -->
+ <nav class="navbar navbar-expand-lg bg-primary navbar-dark py-6 fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="/" onclick="event.preventDefault(); location.reload();">
+      <img src="img/logo.png" alt="Logo del Instituto" class="logo-navbar">
+     </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon bg-light rounded"></span>
+    </button>
 
-    <section>
-        <h2>Get Student by ID</h2>
-        <input type="number" id="studentId" placeholder="Student ID">
-        <button onclick="getStudentById()">Get Student</button>
-        <pre id="getResult"></pre>
-    </section>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Institucional</a></li>
+        <li class="nav-item"><a class="nav-link" href="estudiantes.html">Estudiantes</a></li>
+        <li class="nav-item"><a class="nav-link" href="docentes.html">Docentes</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://abc.gob.ar/calendario_escolar">Calendario</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://isfdyt57-bue.infd.edu.ar/aula/acceso.cgi">CAMPUS</a></li>
+      </ul>
+    </div>
+  </div>
+ </nav>
 
-    <section>
-        <h2>Get Students by Career</h2>
-        <input type="text" id="careerFilter" placeholder="Career">
-        <button onclick="getStudentsByCareer()">Get Students</button>
-        <pre id="careerResult"></pre>
-    </section>
+  <!-- CONTENIDO --> 
+  <div id="home" class="contenedor-principal">
+  <div class="seccion-texto">
+    <h2>I.S.F.D. y T.</h2>
+    <h3>N°57 “Juana Paula Manso”</h3>
+    <h3>INSCRIPCIÓN A CARRERAS 2025</h3>
+    <h4 class="separado">(TÍTULOS OFICIALES)</h4>
+    <!-- Imagen -->
+    <img src="img/instituto.png" alt="Foto del Instituto 57" class="img-fluid mb-4 img-instituto">
 
-    <section>
-        <h2>Delete Student</h2>
-        <input type="number" id="deleteId" placeholder="Student ID">
-        <button onclick="deleteStudent()">Delete Student</button>
-        <pre id="deleteResult"></pre>
-    </section>
+    <p class="mb-2">El Instituto Superior de Formación Docente y Técnica N.º 57 "Juana Paula Manso" es una institución pública y gratuita ubicada en Chascomús, Buenos Aires. Forma parte de la Región Educativa XVII y depende de la Dirección General de Cultura y Educación de la Provincia. Ofrece una amplia gama de carreras docentes y técnicas de nivel superior, brindando títulos oficiales y de calidad.</p> 
+    <p>Su historia se remonta a 1972, y desde entonces ha evolucionado para responder a las necesidades educativas de la comunidad, incluyendo extensiones en Ranchos y Lezama. Comprometido con la formación integral, el instituto promueve la innovación pedagógica y la inclusión social, consolidándose como un referente en la región.</p>
+   </div>
 
-    <script src="app.js"></script>
+  <div class="grid-container">
+  <div class="ficha-inscripcion">
+
+   
+
+      <!-- Registrar Estudiante -->
+    <section id="formulario-contenedor" class="card shadow-sm p-4 mb-4">
+      <h2 class="seccion-texto">Registrar Estudiante</h2>
+      <p class="seccion-texto">Pre inscripción al ciclo 2026</p>
+      <div class="col-md-12">
+   <select id="registerCareer" class="form-select">
+  <option value="" disabled selected>Selecciona tu carrera*</option>
+   </select>
+</div>
+      <div class="row g-3 mt-2">
+        <div class="col-md-6">
+          <input type="text" id="registerName" class="form-control" placeholder="Nombre">
+        </div>
+        <div class="col-md-6">
+          <input type="text" id="registerLastName" class="form-control" placeholder="Apellido" >
+        </div>
+        <div class="col-md-12">
+          <input type="text" id="registerMail" class="form-control" placeholder="Correo">
+        </div>
+        <div class="col-md-12">
+          <input type="text" id="registerCel" class="form-control" placeholder="Celular">
+        </div>
+        <div class="col-12">
+          <button onclick="registerStudent()" class="btn btn-primary">Registrar</button>
+        </div>
+        
+        <pre id="registerResult" class="result-box"></pre>
+      </div>
+
+    <!-- Buscar por ID -->
+      <h2 class="seccion-texto">Buscar por ID</h2>
+      <div class="row g-3 mt-2">
+        <div class="col-md-6">
+          <input type="number" id="studentId" class="form-control" placeholder="ID de estudiante">
+        </div>
+        <div class="col-md-12">
+          <button onclick="getStudentById()" class="btn btn-primary">Buscar</button>
+        </div>
+        <pre id="getResult" class="mt-3 bg-light border p-2"></pre>
+      </div>
+    <!-- Buscar por Carrera -->
+      <h2 class="seccion-texto">Buscar por Carrera</h2>
+      <div class="row g-3 mt-2">
+        <div class="col-md-6">
+          <input type="text" id="careerFilter" class="form-control" placeholder="Carrera">
+        </div>
+        <div class="col-md-12">
+          <button onclick="getStudentsByCareer()" class="btn btn-primary">Buscar</button>
+        </div>
+        <pre id="careerResult" class="mt-3 bg-light border p-2"></pre>
+      </div>
+
+  </section>
+  </div>
+  </div>
+
+<!-- FOOTER --> <!-- Pie de página con información de contacto institucional y enlaces útiles -->
+<footer class="footer-full">
+  <div class="footer-inner">
+    <div class="row text-center text-md-start">
+      <div class="col-md-6">
+        <h5>I.S.F.D. y T. N°57 “Juana Paula Manso”</h5>
+        <p>Dirección: Calle Franklin 166,</p>
+        <p>entre Alvear y Libres del Sur,</p>
+        <p>Chascomús, CP 7130</p>
+        <p>Email: isfdyt57chascomus@abc.gob.ar</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Enlaces</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Política institucional</a></li>
+          <li><a href="#">Reglamento académico</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+    <small>&copy; 2025 Instituto Juana Paula Manso. Todos los derechos reservados.</small>
+    </div>
+  </div>
+</footer> 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", async function() {
+    const select = document.getElementById('registerCareer');
+    try {
+        const response = await fetch('http://localhost:5001/api/careers', {
+            headers: {
+                "Authorization": "Bearer 12345ABCDEF"
+            }
+        });
+        const careers = await response.json();
+        // Limpia las opciones previas (menos la de "Selecciona tu carrera*")
+        select.innerHTML = '<option value="" disabled selected>Selecciona tu carrera*</option>';
+        careers.forEach(career => {
+            // Ajusta según la estructura de tu careers.json
+            select.innerHTML += `<option value="${career.code}">${career.name}</option>`;
+        });
+    } catch (error) {
+        console.error("No se pudieron cargar las carreras:", error);
+    }
+});
+</script>
+<script src="app.js"></script>
+  
 </body>
 </html>

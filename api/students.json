@@ -1,1 +1,97 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "dihuen",
+    "career": "Tecnologías de la Información"
+  },
+  {
+    "id": 2,
+    "name": "juanma",
+    "career": "Ciencia de Datos"
+  },
+  {
+    "id": 5,
+    "name": "dihuen",
+    "career": "sisiis"
+  },
+  {
+    "id": 6,
+    "name": "juan",
+    "career": "Ciencias de la Computación"
+  },
+  {
+    "id": 7,
+    "name": "lalalsla",
+    "career": "Ingeniería de Software"
+  },
+  {
+    "id": 8,
+    "name": "enzo",
+    "career": "Ciencia de Datos"
+  },
+  {
+    "id": 9,
+    "name": "pepe",
+    "career": "Ciencias de la Computación"
+  },
+  {
+    "id": 10,
+    "name": "julian",
+    "career": "Ciencias de la Computación"
+  },
+  {
+    "id": 11,
+    "name": "ia",
+    "career": "Ingeniería en Sistemas"
+  },
+  {
+    "id": 12,
+    "name": "asdasd",
+    "career": "Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial"
+  },
+  {
+    "id": 13,
+    "name": "Rodrigo",
+    "career": "Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial"
+  },
+  {
+    "id": 14,
+    "name": "as",
+    "career": "Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial"
+  },
+  {
+    "id": 15,
+    "name": "s",
+    "career": "Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial"
+  },
+  {
+    "id": 16,
+    "name": "A",
+    "career": "Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial"
+  },
+  {
+    "id": 17,
+    "name": "Rodrigo",
+    "career": "Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial"
+  },
+  {
+    "id": 18,
+    "name": "Rodrigo",
+    "career": "Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial"
+  },
+  {
+    "id": 19,
+    "name": "Rodrigo",
+    "career": "undefined"
+  },
+  {
+    "id": 20,
+    "name": "dsadasd",
+    "career": "undefined"
+  },
+  {
+    "id": 21,
+    "name": "rewrwer",
+    "career": "undefined"
+  }
+]
