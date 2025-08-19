@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carreras del instituto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+  </head>
+<body class="bg-light text-dark" style="padding-top: 150px;">
+
+ <!-- NAVBAR -->
+ <nav class="navbar navbar-expand-lg bg-primary navbar-dark py-6 fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="/" onclick="event.preventDefault(); location.reload();">
+      <img src="img/logo.png" alt="Logo del Instituto" class="logo-navbar">
+     </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon bg-light rounded"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Institucional</a> <!-- Enlace a la página principal -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="docentes.html">Docentes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="careers.html">Carrera</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <div class="container py-5">
+      <h1 class="seccion-texto">Categorias del instituto</h1>
+  
+      <section class="mb-5 panel">
+  <h2 class="seccion-texto">Registrar Categoría</h2>
+  <div class="mb-3">
+    <input type="text" id="categoryName" class="form-control dark-input mb-2" placeholder="Nombre de la categoría">
+    <button class="btn btn-warning glow" onclick="registerCategory()">Registrar categoría</button>
+  </div>
+  <pre id="categoryRegisterResult" class="bg-dark p-3 border rounded text-success terminal-box"></pre>
+</section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
